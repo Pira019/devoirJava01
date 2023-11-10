@@ -7,9 +7,12 @@ public class Main {
 		
 		NombresRemarquables.enumererChiffres(nombre);
 		
-		//exemple de nombre simi-carre 25,76,376,625
+		//exemple de nombre simili-carre 25,76,376,625
 		int nbrSimiCarre = 25;
-		System.out.println("\nResultat si simi-carré : " + NombresRemarquables.estSimiliCarre(nbrSimiCarre));  
+		System.out.println("\nResultat si simili-carré : " + NombresRemarquables.estSimiliCarre(nbrSimiCarre));  
+		
+		int extraPremier = 59399;
+		System.out.println("\nResultat si extra-premier : " + NombresRemarquables.estExtraPremier(extraPremier));  
 	}
 
 }

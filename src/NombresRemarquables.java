@@ -41,5 +41,40 @@ public class NombresRemarquables {
 		
 		return true;
 	}
+	
+	public static boolean estPremier(int n) {
+		//Les nombres <= à 1 ne sont pas premiers
+		if(n <= 1) {
+			return false;
+		}
+		
+		//la condition i * i <=n => la boucle continue tant que le carré de i est <= à n;
+		for(int i=2; i * i <= n; i++) {
+			if(n % i == 0) {
+				return false; // si n est divisible par i => n n'est pas premier
+			}
+		}
+		
+		return true; // n % i == 0 => n est premier 
+	}
+	
+	public static boolean estExtraPremier(int n) {
+		
+		int nombreSansDernierChiffreDeN = n;
+		 
+		while(n > 0) {  
+			 
+			
+			if(!estPremier(nombreSansDernierChiffreDeN)) {
+				return false; // si le nombre sans le derier chiffre n'est pas premier => n != extre-premier
+			}
+			
+		 	n /= 10; // enlever le dernier chiffre 	
+		 	nombreSansDernierChiffreDeN = n; 
+		 	 
+		}
+		
+		return true;
+	}
 
 }
