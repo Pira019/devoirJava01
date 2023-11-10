@@ -6,6 +6,10 @@ public class Main {
 		int nombre = 6539;
 		
 		NombresRemarquables.enumererChiffres(nombre);
+		
+		//exemple de nombre simi-carre 25,76,376,625
+		int nbrSimiCarre = 25;
+		System.out.println("\nResultat si simi-carré : " + NombresRemarquables.estSimiliCarre(nbrSimiCarre));  
 	}
 
 }

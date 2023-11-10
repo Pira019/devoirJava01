@@ -23,5 +23,23 @@ public class NombresRemarquables {
 		}
 		
 	}
+	
+	public static boolean estSimiliCarre(int n) {
+		// si n < 0 on prend sa valeur absolue
+		int nombreAbsolu = (n < 0) ? -n : n; 
+		int carreNombre = n * n;
+		int nombreAcomparer = nombreAbsolu; // si c'est different lors de l'enumeration on arrete
+		
+		//boucle pour comparer des chiffres de droite à gauche 
+		while (nombreAcomparer > 0) {
+			if(nombreAcomparer % 10 != carreNombre % 10) { // si la condition est vraie alors pas de simili-carré
+				return false;
+			}
+			nombreAcomparer = nombreAcomparer / 10;
+			carreNombre = carreNombre / 10;
+		}
+		
+		return true;
+	}
 
 }
